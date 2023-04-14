@@ -25,14 +25,6 @@ else # 4 GB or more
 worker_connections=4096
 fi
 
-#Write the recommended settings to nginx configuration file
-echo "worker_processes $worker_processes;
-events {
-worker_connections $worker_connections;
-}" > /etc/nginx/nginx.conf
-
-#Restart nginx to apply the changes
-systemctl restart nginx
 
 #Output the recommended settings
 echo "Recommended Nginx settings:"
